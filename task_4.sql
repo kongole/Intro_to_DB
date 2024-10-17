@@ -2,14 +2,13 @@
 
 SELECT 
     COLUMN_NAME AS 'Column Name',
-    DATA_TYPE AS 'Data Type',
-    CHARACTER_MAXIMUM_LENGTH AS 'Max Length',
+    COLUMN_TYPE AS 'Column Type',
     IS_NULLABLE AS 'Is Nullable',
     COLUMN_DEFAULT AS 'Default Value',
     COLUMN_KEY AS 'Key',
     EXTRA AS 'Extra Info'
 FROM 
-    information_schema.columns
+    INFORMATION_SCHEMA.COLUMNS
 WHERE 
-    table_name = 'books' 
-    AND table_schema = 'alx_book_store';
+    TABLE_SCHEMA = 'alx_book_store'
+    AND TABLE_NAME = 'books';
